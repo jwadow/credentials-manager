@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+  Credentials Manager
+  Copyright (C) 2026 Jwadow
+  Licensed under AGPL-3.0
+  https://github.com/jwadow/credentials-manager
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credentials Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <div class="logo">
+                    🔐 Credentials Manager
+                    <a href="https://github.com/jwadow" target="_blank" rel="noopener noreferrer" class="author-link">by Jwadow</a>
+                </div>
+                
+                <div class="controls">
+                    <button id="btnImport" class="btn-primary">📥 Import File</button>
+                    <button id="btnExport" class="btn-secondary">📤 Export</button>
+                    <button id="btnAddAccount" class="btn-success">➕ New Account</button>
+                    <button id="clearData" class="btn-danger">🗑️ Clear Data</button>
+                </div>
+
+                <div class="search-container">
+                    <input type="text" id="searchInput" placeholder="🔍 Search accounts..." class="search-input">
+                </div>
+
+                <div id="tagsContainer" class="tags-container-sidebar">
+                    <!-- Tags will be rendered here by JS -->
+                </div>
+            </div>
+            
+            <!-- Custom scrollbar -->
+            <div class="custom-scrollbar">
+                <div class="custom-scrollbar-thumb"></div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div id="credentialsList" class="credentials-grid">
+                <!-- Accounts will be rendered here by JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
